@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Entering build phase...
       - echo Build started on `date`
+      - cd lambda
       - mvn package shade:shade
       - mv target/HelloWorld-1.0.jar .
       - unzip HelloWorld-1.0.jar
